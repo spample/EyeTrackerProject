@@ -160,8 +160,10 @@ while True:
             # Perform actions based on gaze ratio (not shown in full code for brevity)
             if gaze_ratio <= 1.3:  # Example logic for gaze-based selection
                 print("Looking right.")
-            else:
+            elif gaze_ratio > 1.3:
                 print("Looking left.")
+            else:
+                print("Looking center.")
 
         # Display the frame with annotations
         cv2.imshow('live Cam Testing', img)
